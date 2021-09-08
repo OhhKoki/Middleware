@@ -19,10 +19,8 @@ import org.springframework.util.Assert;
 import java.util.concurrent.*;
 
 /**
- * @author lei
- * @create 2021-06-22 15:36
- * @desc sql server 实时同步
- **/
+ * 实时同步
+ */
 @Configuration
 @Log4j2
 public class ChangeEventConfig {
@@ -36,6 +34,7 @@ public class ChangeEventConfig {
 
     /**
      * Debezium 配置
+     * @return
      */
     @Bean
     io.debezium.config.Configuration debeziumConfig() {
@@ -80,6 +79,7 @@ public class ChangeEventConfig {
 
     /**
      * 实时同步服务类，执行任务
+     * @param configuration
      * @return
      */
     @Bean
@@ -155,8 +155,7 @@ public class ChangeEventConfig {
 
             /**
              * 公有方法
-             *
-             * @return ExecutorService
+             * @return
              */
             public ExecutorService getInstance() {
                 return es;
