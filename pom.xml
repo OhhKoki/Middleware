@@ -19,7 +19,7 @@
 
     <modules>
         <module>debezium-cdc</module>
-        <module>debezium-cdc</module>
+        <module>flink-cdc</module>
     </modules>
 
     <properties>
