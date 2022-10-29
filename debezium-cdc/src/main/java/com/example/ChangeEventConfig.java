@@ -64,6 +64,8 @@ public class ChangeEventConfig {
             .with("database.server.name", "cdcservice")
             // 监控的数据库
             .with("database.include.list", "cdcservice")
+            // 时区
+            .with("database.serverTimezone", "Asia/Shanghai")
             // 监控的表
             .with("table.whitelist", "cdcservice.stuinfo, cdcservice.stuinfo_bar")
             // 是否包含数据库表结构层面的变更，建议使用默认值true
